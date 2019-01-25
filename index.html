@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>L1</title>
+    <style>
+        .done {
+            text-decoration: line-through;
+            
+        }
+        .pointer-hand{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- <div id="app1">
+        {{mensaje}} 
+        <button @click="cambiarValor" type="button">Cambiar valor</button>
+    </div>
+
+    <br>
+    <hr> -->
+    <div id="app2">
+            {{mensaje}}
+
+            <img 
+            v-for="persona in personas" 
+            v-bind:src="persona.picture.thumbnail" 
+            :title="persona.name |filtroNombre">
+
+    </div>
+    <hr>
+    <br>
+    <br>
+    <main>
+         {{mensaje}}
+         <br>
+         {{mensajeReverso}}
+
+
+        <h1>Personas</h1>
+         <ul>
+             <li 
+             v-bind:class="{ done: persona.registrado, 'pointer-hand':true }"
+             @click="intercambiarValor(persona)"  
+             v-for="persona in personas">
+                 {{persona.nombre | minuscula | reverso}} -
+                 <small>{{persona.edad}}</small>-
+                 <small>{{persona.registrado | siONo}}</small>
+            </li>
+         </ul>
+         <h1>Mayores de Edad</h1>
+         <ul>
+             <li v-for="persona in mayoresEdad">
+                    {{persona.nombre}} -
+                    <small>{{persona.edad}}</small>-
+                    <small>{{persona.registrado}}</small>
+             </li>
+         </ul>
+         <h1>Registrados</h1>
+         <ul>
+             <li v-for="persona in registrados">
+                    {{persona.nombre}} -
+                    <small>{{persona.edad}}</small>-
+                    <small>{{persona.registrado}}</small>
+             </li>
+         </ul>
+        <!-- <input v-on:keyup.enter="agregarMes" type="text" v-model="mesNuevo">
+        <button v-on:click="agregarMes" type="button">Agregar</button>
+            <ul> 
+
+                <li  v-for="(mes,index) in meses">
+                   {{index}} - {{mes}} 
+                </li>
+                
+
+            </ul> -->
+
+            
+                <!-- <li v-for="(value,key,index) in niveles">
+                        {{index}} - {{key}} <small>{{value}}</small>
+                     </li> -->
+
+        <!-- <h1 v-if="conectado">Estoy conectado</h1>
+        <h1 v-else>No estoy conectado</h1> -->
+        <!-- <template v-if="conectado">
+                <h1 v-if="edad > 10 && edad <20 "> Es un joven</h1>
+                <h1 v-else-if="edad > 20 && edad < 30"> Es un adulto</h1>
+                <h1 v-else-if="edad > 30 && edad < 40"> Es un adulto ^2</h1>
+        </template>
+        <template v-else>
+                <h1>No estoy conectado</h1> 
+
+        </template> -->
+
+            
+            <!-- <h1>
+                {{mensaje}}
+            </h1>
+            <input v-model="mensaje" type="text"/> -->
+    </main>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
