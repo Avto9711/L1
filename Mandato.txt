@@ -1,0 +1,6 @@
+Consumir utilizando : https://jsonplaceholder.typicode.com/todos
+Renderizar La lista en el HTML
+Poner un boton eliminar por cada todo (y poder eliminar)
+Cuando se presione un todo, aplicar una clase css para ponerla como done
+mostrar las todos done con un computed property
+
